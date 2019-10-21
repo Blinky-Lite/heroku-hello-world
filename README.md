@@ -43,11 +43,22 @@ The username is admin and the password is the one created above<br>
 13) The dashboard view is at:<br>
 **http://localhost:1880/dashboard**
 
-14) Exit the node-red flow:
+14) Exit the node-red flow:<br>
 **Control-C**
 
-15) Log into heroku:
+15) Log into heroku:<br>
 **heroku login**
 
-16) Create a git repository:
+16) Create a git repository:<br>
 **git init**
+
+17) Go to a browser and log into your heroku dashboard:<br>
+**https://dashboard.heroku.com**
+
+18) Click ***New>>Create new app*** and Choose app name and region and click ***Create app***
+
+
+
+
+
+
