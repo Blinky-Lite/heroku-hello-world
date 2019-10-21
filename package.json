@@ -1,0 +1,26 @@
+{
+  "name": "heroku-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node_modules/node-red/red.js -s ./settings.js -u ./",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node-red"
+  ],
+  "author": "David McGinnis",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "node-red": "^1.0.2",
+    "node-red-dashboard": "^2.17.1"
+  }
+}

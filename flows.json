@@ -1,0 +1,301 @@
+[
+    {
+        "id": "bee07e0a.32a9",
+        "type": "tab",
+        "label": "Hello World",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6ad7c930.1a06b8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Hello World!",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1ecff210.c549ee",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Tab 1",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d907911e.43ab",
+        "type": "ui_group",
+        "z": "",
+        "name": "Group 1",
+        "tab": "1ecff210.c549ee",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9d55d8ba.4c2988",
+        "type": "http in",
+        "z": "bee07e0a.32a9",
+        "name": "/html",
+        "url": "/html",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "cc1dd64b.1c6418"
+            ]
+        ]
+    },
+    {
+        "id": "1c69e82d.f3e058",
+        "type": "template",
+        "z": "bee07e0a.32a9",
+        "name": "body",
+        "field": "payload.body",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!-- Body HTML -->\n    <div width=\"100%\" >\n        <table width=\"100%\" >\n            <tr>\n                <td width=\"100%\" align='center'>\n                    <h1 class='hello-world'>Hej!</h1>\n                </td>\n            </tr>\n            <tr>\n                <td align='center'>\n                    <img src='/img/helloWorld.png' width='50%'>\n                </td>\n            </tr>\n        </table>\n    </div>\n",
+        "output": "str",
+        "x": 730,
+        "y": 40,
+        "wires": [
+            [
+                "8a09ac4b.7d4b9"
+            ]
+        ]
+    },
+    {
+        "id": "8a09ac4b.7d4b9",
+        "type": "template",
+        "z": "bee07e0a.32a9",
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n{{{payload.head}}}\n  </head>\n  <body>\n{{{payload.body}}}\n  </body>\n</html>",
+        "output": "str",
+        "x": 850,
+        "y": 40,
+        "wires": [
+            [
+                "746126f0.9ec358"
+            ]
+        ]
+    },
+    {
+        "id": "746126f0.9ec358",
+        "type": "http response",
+        "z": "bee07e0a.32a9",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "fe7fd8e0.1c1c28",
+        "type": "template",
+        "z": "bee07e0a.32a9",
+        "name": "head",
+        "field": "payload.head",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "    <meta charset=\"UTF-8\">\n    <link rel=\"icon\" href=\"/img/favicon.ico?v=4\" type=\"image/x-icon\"/>\n    <title>{{payload.title}}</title>\n    <style>\n{{{payload.css}}}\n    </style>\n    <script>\n{{{payload.javascript}}}\n    </script>",
+        "output": "str",
+        "x": 610,
+        "y": 40,
+        "wires": [
+            [
+                "1c69e82d.f3e058"
+            ]
+        ]
+    },
+    {
+        "id": "cc1dd64b.1c6418",
+        "type": "template",
+        "z": "bee07e0a.32a9",
+        "name": "css",
+        "field": "payload.css",
+        "fieldType": "msg",
+        "format": "css",
+        "syntax": "mustache",
+        "template": "        :root \n        {\n            --color1: #415c71;\n            --color2: #fdc300;\n            --big-text-size : 600%;\n        }\n        body \n        {\n            background-color: var(--color1);\n            padding-left:25px;\n            padding-right:25px;\n        }\n        img \n        {\n            object-fit: contain;\n        }\n        .hello-world\n        {\n            font-size: var(--big-text-size);\n            color : var(--color2);\n        }\n",
+        "output": "str",
+        "x": 230,
+        "y": 40,
+        "wires": [
+            [
+                "807a5663.783128"
+            ]
+        ]
+    },
+    {
+        "id": "807a5663.783128",
+        "type": "template",
+        "z": "bee07e0a.32a9",
+        "name": "javascript",
+        "field": "payload.javascript",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "        console.log('Hello World!')",
+        "output": "str",
+        "x": 360,
+        "y": 40,
+        "wires": [
+            [
+                "759439c2.0fd958"
+            ]
+        ]
+    },
+    {
+        "id": "759439c2.0fd958",
+        "type": "template",
+        "z": "bee07e0a.32a9",
+        "name": "title",
+        "field": "payload.title",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Hello World!",
+        "output": "str",
+        "x": 490,
+        "y": 40,
+        "wires": [
+            [
+                "fe7fd8e0.1c1c28"
+            ]
+        ]
+    },
+    {
+        "id": "4036f90a.9214f8",
+        "type": "ui_text",
+        "z": "bee07e0a.32a9",
+        "group": "d907911e.43ab",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hello",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 610,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "91d97378.ea43d",
+        "type": "inject",
+        "z": "bee07e0a.32a9",
+        "name": "",
+        "topic": "helloWorld",
+        "payload": "World!",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 400,
+        "y": 120,
+        "wires": [
+            [
+                "4036f90a.9214f8"
+            ]
+        ]
+    }
+]
