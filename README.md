@@ -21,11 +21,19 @@ Create and add variable to .env file<br>
 Install node modules<br>
 **npm install**
 
-Create a new bcrypt password for editing the node-red flow
+Create a new bcrypt password for editing the node-red flow<br>
 **node -e "console.log(require('bcryptjs').hashSync(process.argv[1], 8));" *your-password-here***
+
+and place this password in the settings.js file<br>
+**nano settings.js**
+
+in the adminAuth field<br>
 
 Run the Node-RED flow<br>
 **./run-blinky-lite.sh $(pwd)**
 
 View flow at:<br>
+**http://localhost:1880/admin**
+
+The username is admin and the password is the one created above<br>
 
