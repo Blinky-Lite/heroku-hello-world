@@ -70,7 +70,7 @@ The username is admin and the password is the one created above<br>
 **git push heroku master**
 
 23) Add the configuration variable in the .env file to the heroku site at:<br>
-**https://dashboard.heroku.com/apps/***your-app-name***/settings**
+**https://dashboard.heroku.com/apps/_your-app-name_/settings**
 
 click on the ***Reveal Config Vars** and add a KEY of **NODEREDCONFIGSECRET** with a value of **a-secret-key**
 
