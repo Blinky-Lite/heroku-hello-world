@@ -21,6 +21,11 @@ Create and add variable to .env file<br>
 Install node modules<br>
 **npm install**
 
+Create a new bcrypt password for editing the node-red flow
+**node -e "console.log(require('bcryptjs').hashSync(process.argv[1], 8));" *your-password-here***
+
 Run the Node-RED flow<br>
 **./run-blinky-lite.sh $(pwd)**
+
+View flow at:<br>
 
