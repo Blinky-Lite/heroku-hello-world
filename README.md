@@ -49,13 +49,16 @@ The username is admin and the password is the one created above<br>
 15) Log into heroku:<br>
 **heroku login**
 
-16) Create a git repository:<br>
-**git init**
-
-17) Go to a browser and log into your heroku dashboard:<br>
+16) Go to a browser and log into your heroku dashboard:<br>
 **https://dashboard.heroku.com**
 
-18) Click ***New>>Create new app*** and Choose app name and region and click ***Create app***
+17) Click ***New>>Create new app*** and Choose app name and region and click ***Create app***
+
+18) Go back to your terminal window and create a git repository:<br>
+**git init**
+
+19) Add your heroku repository<br>
+**heroku git:remote -a *your-app-name***
 
 
 
