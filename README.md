@@ -77,7 +77,7 @@ click on the ***Reveal Config Vars** and add a KEY of **NODEREDCONFIGSECRET** wi
 24) View flow at:<br>
 **https://*your-app-name*.herokuapp.com/admin**
 
-The username is admin and the password is the one created above<br>
+The username is admin and the password is the one created in Step 8 and 9<br>
 
 25) The html view is at:<br>
 **https://*your-app-name*.herokuapp.com/html**
