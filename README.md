@@ -60,6 +60,13 @@ The username is admin and the password is the one created above<br>
 19) Add your heroku repository<br>
 **heroku git:remote -a *your-app-name***
 
+20) Add files to git repository<br>
+**git add .**
+
+21) Commit the files to the git repository<br>
+**git commit -m "*your comments*"**
+
+
 
 
 
