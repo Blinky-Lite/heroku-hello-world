@@ -66,8 +66,24 @@ The username is admin and the password is the one created above<br>
 21) Commit the files to the git repository<br>
 **git commit -m "*your comments*"**
 
+22) Push the files to heroku<br>
+**git push heroku master**
 
+23) Add the configuration variable in the .env file to the heroku site at:<br>
+**https://dashboard.heroku.com/apps/*your-app-name*/settings**
 
+click on the ***Reveal Config Vars** and add a KEY of **NODEREDCONFIGSECRET** with a value of **a-secret-key**
+
+24) View flow at:<br>
+**https://*your-app-name*.herokuapp.com/admin**
+
+The username is admin and the password is the one created above<br>
+
+25) The html view is at:<br>
+**https://*your-app-name*.herokuapp.com/html**
+
+26) The dashboard view is at:<br>
+**https://*your-app-name*.herokuapp.com/dashboard**
 
 
 
