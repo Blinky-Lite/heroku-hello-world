@@ -1,7 +1,7 @@
 # heroku-hello-world
 
 1) Download git repository to zip file<br>
-**wget https://github.com/dmcginnis427/heroku-hello-world/archive/master.zip**
+**wget https://github.com/Blinky-Lite/heroku-hello-world/archive/master.zip**
 
 2) Un-zip zip file<br>
 **unzip master.zip**
